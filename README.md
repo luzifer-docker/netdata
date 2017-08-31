@@ -12,6 +12,8 @@ docker run -d --cap-add SYS_PTRACE \
            -p 19999:19999 quay.io/luzifer/netdata
 ```
 
+To persist health check data and machine GUID you need to mount a persistent volume to `/var/lib/netdata`.
+
 ## Configuration
 
 To configure alerts have a look at the [`health_alarm_notify.conf` template](templates/health_alarm_notify.conf). There you can see all variable names you need to specify as environment variables.
