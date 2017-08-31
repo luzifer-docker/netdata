@@ -42,3 +42,8 @@ rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 ln -sf /dev/stdout /var/log/netdata/access.log
 ln -sf /dev/stdout /var/log/netdata/debug.log
 ln -sf /dev/stderr /var/log/netdata/error.log
+
+# Install korvike for template substitution
+curl -sSLfo /usr/local/bin/korvike https://github.com/Luzifer/korvike/releases/download/v0.4.1/korvike_linux_amd64
+chmod +x /usr/local/bin/korvike
+echo 'f791fecdc62b2e2ff07342b41fdf165ee40c2a8a286f1c2c0f48228b982e2953  /usr/local/bin/korvike' | sha256sum -c
